@@ -1,0 +1,48 @@
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote For Me</title>
+    <meta name="robots" content="noindex">
+ 
+</head>
+<body>
+<style>
+
+iframe {
+  border: none;
+}
+
+
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }    
+</style>
+<iframe src="./user/index.html" width="100%" style="height: 100vh"></iframe>
+<script>
+// Create a hidden honeypot trap
+const honeypot = document.createElement('div');
+honeypot.style.display = 'none';
+honeypot.innerHTML = ' Bot trap ';
+
+// Add the honeypot to the page
+document.body.appendChild(honeypot);
+
+// Set a timeout to check if the honeypot has been accessed
+setTimeout(() => {
+  if (honeypot.offsetWidth > 0 || honeypot.offsetHeight > 0) {
+    // If the honeypot has been accessed, it's likely a bot
+    console.log('Bot detected!');
+    // Take action: block the bot, redirect, or display a warning
+  }
+}, 5000);
+</script>
+</body></html>
